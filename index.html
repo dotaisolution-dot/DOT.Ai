@@ -212,6 +212,64 @@ footer a:hover{color:var(--text)}
   h1{font-size:clamp(29px,8.7vw,34px)}
 }
 
+
+
+/* Refined brand finish */
+:root{
+  --bg:#12343b;--navy:#153a43;--navy2:#28525b;
+  --blue:#e1b382;--violet:#c89666;--ice:#e7bd91;
+  --text:#f7f1e8;--muted:#c0cdcc;--line:rgba(231,189,145,.2);
+  --glass:rgba(42,78,86,.48)
+}
+body{line-height:1.7}
+nav{background:rgba(14,43,49,.9);border-bottom-color:rgba(231,189,145,.18);box-shadow:0 8px 30px rgba(3,17,21,.12)}
+.links a{transition:color .18s ease}
+.links a:hover{color:var(--ice)}
+.menu-toggle{transition:background .18s ease,border-color .18s ease}
+.menu-toggle:hover{background:rgba(225,179,130,.14);border-color:rgba(231,189,145,.5)}
+.hero{background:radial-gradient(850px 580px at 79% 43%,rgba(225,179,130,.17),transparent 62%),radial-gradient(780px 540px at 7% 92%,rgba(45,84,94,.56),transparent 64%),linear-gradient(115deg,#12343b 0%,#153a42 55%,#12343b 100%)}
+.hero .wrap>div:first-child{max-width:650px}
+.hero-kicker{display:flex;align-items:center;gap:10px;margin:0 0 22px;color:var(--ice);font:700 10px/1.4 var(--head);letter-spacing:.19em}
+.hero-kicker:before{content:"";width:20px;height:1px;background:var(--ice);opacity:.8}
+.hero-kicker span{opacity:.55}
+h1{letter-spacing:-.04em}
+.hero p.sub{max-width:510px;line-height:1.8}
+.btn{min-height:50px;box-shadow:0 8px 24px rgba(3,17,21,.12)}
+.btn:active{transform:translateY(1px)}
+.btn.ghost{border-color:rgba(231,189,145,.24);background:rgba(45,84,94,.42)}
+.btn.ghost:hover{background:rgba(45,84,94,.72);border-color:rgba(231,189,145,.55)}
+section.block{padding-top:104px;padding-bottom:104px}
+#projects{background:linear-gradient(180deg,#12343b 0%,#102d34 100%);border-top-color:rgba(231,189,145,.15)}
+.projects-head{align-items:end}
+.projects-head h2{max-width:720px}
+.projects-head p{line-height:1.75}
+.project-card{background:linear-gradient(155deg,rgba(38,76,84,.82),rgba(15,43,49,.94));box-shadow:0 16px 42px rgba(3,17,21,.22)}
+.project-card:hover{box-shadow:0 22px 52px rgba(3,17,21,.32);border-color:rgba(231,189,145,.52)}
+.project-art{background:radial-gradient(circle at 75% 25%,rgba(225,179,130,.2),transparent 46%),linear-gradient(145deg,#1a444b,#153840)}
+.project-info{padding:19px 20px 21px}
+.project-info p{line-height:1.65}
+.project-tags span{border-color:rgba(231,189,145,.2);background:rgba(12,38,44,.2)}
+.svc .tag{background:rgba(225,179,130,.07)}
+.card{background:linear-gradient(135deg,rgba(45,84,94,.45),rgba(21,58,67,.58));border-color:rgba(231,189,145,.18)}
+.card:hover{transform:translateY(-3px);border-color:rgba(231,189,145,.52);box-shadow:0 12px 34px rgba(4,20,24,.2)}
+.why{background:linear-gradient(150deg,rgba(45,84,94,.62),rgba(18,52,59,.74));border-color:rgba(231,189,145,.18);transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease}
+.why:hover{transform:translateY(-3px);border-color:rgba(231,189,145,.42);box-shadow:0 18px 42px rgba(4,20,24,.18)}
+.process-card,.faq-item{background:linear-gradient(145deg,rgba(45,84,94,.48),rgba(18,52,59,.72));border-color:rgba(231,189,145,.18)}
+.process-card .step{box-shadow:0 4px 14px rgba(225,179,130,.22)}
+.final{background:radial-gradient(700px 360px at 50% 45%,rgba(225,179,130,.13),transparent 72%)}
+footer{background:#0d292f;border-top-color:rgba(231,189,145,.18)}
+:focus-visible{outline-color:var(--ice)}
+@media(max-width:760px){
+  section.block{padding-top:78px;padding-bottom:78px}
+  .hero-kicker{font-size:9px;letter-spacing:.14em;margin-bottom:16px}
+}
+@media(max-width:600px){
+  section.block{padding-top:64px;padding-bottom:64px}
+  #projects{padding-top:54px;padding-bottom:62px}
+  .hero p.sub{line-height:1.72}
+  .project-info{padding:17px 17px 19px}
+}
+
 </style>
 </head>
 <body>
@@ -228,6 +286,7 @@ footer a:hover{color:var(--text)}
 <header class="hero" id="top">
   <div class="wrap">
     <div>
+      <p class="hero-kicker">WEB DESIGN <span>·</span> AI AUTOMATION <span>·</span> DIGITAL SYSTEMS</p>
       <h1>We build digital experiences. <span>We automate the future.</span></h1>
       <p class="sub">From powerful websites to intelligent AI automation, DOT AI SOLUTIONS helps businesses work smarter, grow faster, and stay ahead in the digital world.</p>
       <div class="cta">
