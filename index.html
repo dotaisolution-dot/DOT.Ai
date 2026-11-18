@@ -162,6 +162,55 @@ footer a:hover{color:var(--text)}
   nav .wrap>a.btn.primary{grid-area:cta;justify-self:stretch;align-self:center;width:100%;max-width:100%;min-width:0;box-sizing:border-box;padding:7px 6px!important;font-size:12px!important;line-height:1.2;text-align:center;white-space:normal;overflow-wrap:anywhere}
   nav .links{top:100%}
 }
+
+/* phone layout refinements */
+@media(max-width:600px){
+  html,body{max-width:100%;overflow-x:hidden}
+  .wrap{width:min(100% - 32px,1160px)}
+  nav .wrap{width:calc(100% - 28px);grid-template-columns:minmax(0,1fr) minmax(0,1.12fr);gap:8px 10px;padding-top:8px;padding-bottom:8px}
+  nav .brand{width:auto;max-width:100%;justify-self:start}
+  nav .brand .wm{width:clamp(96px,30vw,120px)}
+  nav .wrap>.menu-toggle{min-height:44px;padding:9px 12px}
+  nav .wrap>a.btn.primary{min-height:44px;padding:9px 8px!important;font-size:11px!important;line-height:1.25}
+  nav .links{left:0;right:0;top:calc(100% + 8px);max-height:calc(100dvh - 110px);overflow-y:auto}
+  .hero .wrap{padding-top:calc(100px + env(safe-area-inset-top,0px));padding-bottom:28px;gap:12px}
+  h1{font-size:clamp(32px,9vw,42px)}
+  .hero p.sub{font-size:16px;line-height:1.6;margin:18px 0 24px}
+  .hero .cta{gap:10px}
+  .hero .cta .btn{width:100%;min-height:48px;padding:12px 18px}
+  #orb{width:min(58vw,210px);height:auto;max-height:210px;margin:0 auto}
+  section.block{padding:76px 0}
+  #projects{padding:56px 0}
+  .projects-head h2{font-size:clamp(28px,7.4vw,36px)}
+  .projects-grid{gap:16px}
+  .project-art{height:190px}
+  .services .svc{gap:20px}
+  .svc + .svc{margin-top:64px}
+  .services .grid{gap:10px}
+  .why-grid{margin-top:32px;gap:14px}
+  .why{padding:24px}
+  .process-grid{margin-top:28px;gap:14px}
+  .faq-grid{margin-top:24px}
+  #contact .wrap{min-width:0}
+  #contact .contact-details{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+  #inquiry-form{width:100%;max-width:100%;padding:20px!important;margin-top:36px!important}
+  #inquiry-form .form-grid{grid-template-columns:minmax(0,1fr)!important;gap:14px}
+  #inquiry-form label,#inquiry-form input,#inquiry-form select,#inquiry-form textarea{min-width:0;max-width:100%;width:100%;box-sizing:border-box}
+  #inquiry-form label[style*="grid-column"]{grid-column:auto!important}
+  #inquiry-form button{width:100%;min-height:48px}
+  .final{padding:76px 0}
+  footer{padding:48px 0 24px}
+  .fgrid{gap:24px}
+  .wa{width:52px;height:52px;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}
+}
+@media(max-width:360px){
+  nav .wrap{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:8px}
+  nav .brand .logo{height:24px}
+  nav .brand .wm{width:clamp(88px,29vw,104px)}
+  nav .wrap>a.btn.primary{font-size:10.5px!important;padding:8px 5px!important}
+  h1{font-size:clamp(29px,8.7vw,34px)}
+}
+
 </style>
 </head>
 <body>
