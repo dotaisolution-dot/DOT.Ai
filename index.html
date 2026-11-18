@@ -149,6 +149,7 @@ footer{background:#0c262c;border-top:1px solid var(--line);padding:64px 0 28px;c
 .fgrid .brand .wm{width:230px}
 .wa{position:fixed;right:max(20px,env(safe-area-inset-right,0px));bottom:calc(20px + env(safe-area-inset-bottom,0px));z-index:30;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:var(--navy2);border:1.5px solid #e1b382;box-shadow:0 8px 28px rgba(0,0,0,.45),0 0 22px rgba(225,179,130,.35);transition:transform .2s,box-shadow .2s}
 .wa:hover{transform:translateY(-3px) scale(1.06);box-shadow:0 12px 34px rgba(0,0,0,.5),0 0 32px rgba(225,179,130,.55)}
+.wa.is-hidden{opacity:0;visibility:hidden;pointer-events:none}
 .wa svg{width:30px;height:30px;fill:#e1b382;display:block}
 footer a:hover{color:var(--text)}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
@@ -406,6 +407,15 @@ document.querySelector('.menu-toggle').addEventListener('click',function(){
   document.getElementById('site-links').classList.toggle('open',!open);
 });
 document.querySelectorAll('#site-links a').forEach(function(link){link.addEventListener('click',function(){document.querySelector('.menu-toggle').setAttribute('aria-expanded','false');document.getElementById('site-links').classList.remove('open')})});
+if ('IntersectionObserver' in window) {
+  var floatingWhatsApp = document.querySelector('.wa');
+  var inquiryForm = document.getElementById('inquiry-form');
+  if (floatingWhatsApp && inquiryForm) {
+    new IntersectionObserver(function(entries) {
+      floatingWhatsApp.classList.toggle('is-hidden', entries[0].isIntersecting);
+    }, {threshold:0.05}).observe(inquiryForm);
+  }
+}
 document.getElementById('inquiry-form').addEventListener('submit',function(event){
   event.preventDefault();
   var data=new FormData(this);
