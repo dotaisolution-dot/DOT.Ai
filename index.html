@@ -132,12 +132,12 @@ footer a:hover{color:var(--text)}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
 
 @media(max-width:600px){
-  nav .wrap{display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"brand menu" "cta cta";gap:6px 12px;height:auto;min-height:68px;padding-top:8px;padding-bottom:8px}
+  nav .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);grid-template-areas:"brand cta" "menu cta";gap:6px 12px;height:auto;min-height:68px;padding-top:8px;padding-bottom:8px}
   nav .brand{grid-area:brand;flex:0 1 auto;min-width:0}
   nav .brand .logo{height:28px}
   nav .brand .wm{width:clamp(95px,28vw,130px)}
-  nav .wrap>.menu-toggle{display:inline-flex!important;visibility:visible;opacity:1;position:absolute;top:10px;right:0;z-index:22;grid-area:menu;justify-self:end;align-self:center;flex:0 0 auto;padding:7px 8px;font-size:11px}
-  nav .wrap>a.btn.primary{grid-area:cta;justify-self:center;width:min(100%,280px);min-width:0;padding:7px 12px!important;font-size:12px!important;white-space:nowrap}
+  nav .wrap>.menu-toggle{display:inline-flex!important;visibility:visible;opacity:1;position:relative;top:auto;right:auto;z-index:22;grid-area:menu;justify-self:start;align-self:start;flex:0 0 auto;padding:7px 8px;font-size:11px}
+  nav .wrap>a.btn.primary{grid-area:cta;justify-self:stretch;align-self:center;width:100%;min-width:0;padding:7px 8px!important;font-size:clamp(10px,3vw,12px)!important;white-space:nowrap}
   nav .links{top:100%}
 }
 </style>
