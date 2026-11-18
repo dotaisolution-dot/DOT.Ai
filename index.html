@@ -130,6 +130,15 @@ footer{background:#0c262c;border-top:1px solid var(--line);padding:64px 0 28px;c
 .wa svg{width:30px;height:30px;fill:#e1b382;display:block}
 footer a:hover{color:var(--text)}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+
+@media(max-width:400px){
+  nav .wrap{gap:8px}
+  nav .brand{flex:0 1 auto;min-width:0}
+  nav .brand .logo{height:30px}
+  nav .brand .wm{width:clamp(108px,32vw,128px)}
+  nav .menu-toggle{flex:0 0 auto;padding:7px 9px;font-size:11px}
+  nav .wrap>a.btn.primary{flex:0 0 auto;padding:8px 9px!important;font-size:10px!important;white-space:nowrap}
+}
 </style>
 </head>
 <body>
