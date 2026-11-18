@@ -132,12 +132,13 @@ footer a:hover{color:var(--text)}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
 
 @media(max-width:600px){
-  nav .wrap{gap:8px}
-  nav .brand{flex:0 1 auto;min-width:0}
+  nav .wrap{display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"brand menu" "cta cta";gap:6px 12px;height:auto;min-height:68px;padding-top:8px;padding-bottom:8px}
+  nav .brand{grid-area:brand;flex:0 1 auto;min-width:0}
   nav .brand .logo{height:28px}
   nav .brand .wm{width:clamp(95px,28vw,130px)}
-  nav .menu-toggle{flex:0 0 auto;padding:7px 8px;font-size:11px}
-  nav .wrap>a.btn.primary{flex:0 1 auto;min-width:0;padding:7px clamp(8px,2vw,12px)!important;font-size:clamp(9px,2.8vw,12px)!important;white-space:nowrap}
+  nav .menu-toggle{grid-area:menu;justify-self:end;flex:0 0 auto;padding:7px 8px;font-size:11px}
+  nav .wrap>a.btn.primary{grid-area:cta;justify-self:center;width:min(100%,280px);min-width:0;padding:7px 12px!important;font-size:12px!important;white-space:nowrap}
+  nav .links{top:100%}
 }
 </style>
 </head>
